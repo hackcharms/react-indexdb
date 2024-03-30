@@ -1,65 +1,25 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import TodoCard from "../components/todo/Card";
+import { useDispatch, useSelector } from "react-redux";
+import type { RootState } from "../store";
+import { ITodo } from "../types";
+import { addTodo } from "../store/todo";
 // import { useDatabase } from "../hooks/database";
 
 function App() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [todos, setTodos] = useState([]);
-  // const { todos, addTodo, removeTodo } = useTodo([]);
-  useEffect(() => {
-    setTimeout(() => {
-      const db = window.db as IDBDatabase;
-      const transaction = db?.transaction(["todoSchema"], "readwrite");
-      if (transaction) {
-        console.log("transaction.oncomplete");
-        const objectStore = transaction?.objectStore("todoSchema");
-        console.log("objectStore", objectStore);
-        if (transaction) updateTheList(objectStore);
-        transaction.oncomplete = () => {};
-        console.log("transaction avaiable now", transaction);
-      } else {
-        console.log("transaction not avaiable", transaction);
-      }
-      // transaction.oncomplete=(){}
-    }, 100);
-  }, []);
-  function updateTheList(objectStore: IDBObjectStore) {
-    if (!objectStore) return;
-    const allEntries = objectStore?.getAll();
-    allEntries.onsuccess = (event) => {
-      console.log("allEntries.onsuccess", event?.target?.result);
-      setTodos(event?.target?.result);
-      // (event?.target?.result as ITodo[]).forEach((todo) => {
-      //   addTodo(todo);
-      // });
-    };
-  }
-  function addTodoInIDB(todo: ITodo) {
-    const transaction = window.db.transaction(["todoSchema"], "readwrite");
-    const objectStore = transaction.objectStore("todoSchema");
-    const query = objectStore.add(todo);
-    query.addEventListener("success", () => {
-      setTitle("");
-      updateTheList(objectStore);
-    });
-    transaction.addEventListener("complete", () => {
-      console.log("completed");
-      updateTheList(objectStore);
-    });
-    transaction.addEventListener("error", () =>
-      console.log("Transaction error")
-    );
-  }
-  async function storeTodo() {
-    const todo = {
+  const todos = useSelector<RootState, ITodo[]>((state) => state.todo.todos);
+  const dispatch = useDispatch();
+  function storeTodo() {
+    const payload: ITodo = {
       id: Date.now(),
-      title: title,
-      description: description ,
-      createdAt: new Date().toLocaleString(),
-      updatedAt: "",
+      title,
+      description,
+      createdAt: Date.now(),
+      priority: "medium",
     };
-    addTodoInIDB(todo);
+    dispatch(addTodo(payload));
   }
   return (
     <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
@@ -81,7 +41,9 @@ function App() {
             <div className="w-full md:w-full px-3 mb-2 mt-2">
               <input
                 value={title}
-                onInput={(event) => setTitle(event?.target?.value)}
+                onInput={(event) =>
+                  setTitle((event?.target as HTMLInputElement)?.value)
+                }
                 placeholder="Type Your Title"
                 className="bg-gray-300 rounded border border-gray-400 leading-normal w-full py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-gray-400"
               />
@@ -90,7 +52,9 @@ function App() {
                 name="body"
                 placeholder="Type Your Comment"
                 value={description}
-                onInput={(event) => setDescription(event?.target?.value)}
+                onInput={(event) =>
+                  setDescription((event?.target as HTMLInputElement)?.value)
+                }
                 required
               ></textarea>
             </div>

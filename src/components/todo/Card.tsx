@@ -1,17 +1,6 @@
 import { Link } from "react-router-dom";
-interface CardProps{
-    id:string|number,
-    title:string,
-    description:string
-}
-const defaultCard: CardProps = {
-  id: Math.random() * 1000,
-  title: `Here are the biggest enterprise technology acquisitions of 2021 so far`,
-  description: `Here are the biggest enterprise technology acquisitions of 2021 so far,
-        in reverse chronological order.`,
-};
-function TodoCard({ id, description, title }:CardProps) {
-//   const { id, description, title } = defaultCard;
+import { ITodo } from "../../types";
+function TodoCard({ id, description, title }: ITodo) {
   return (
     <Link
       to={"/cards/" + id}
