@@ -1,9 +1,11 @@
+import { TaskPriority } from "../enums";
+
 export interface ITodo {
-  id: string | number;
+  id: number;
   title: string;
   description?: string;
-  priority: "high" | "low" | "urgent" | "medium";
-  createdAt: number | Date;
-  expiredAt?: number | Date;
-  updatedAt?: number | Date;
+  priority?: TaskPriority;
+  createdAt: number;
+  expiredAt?: number;
+  updatedAt?: number;
 }

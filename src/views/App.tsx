@@ -1,25 +1,35 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import TodoCard from "../components/todo/Card";
-import { useDispatch, useSelector } from "react-redux";
-import type { RootState } from "../store";
+// import { useDispatch, useSelector } from "react-redux";
+// import type { RootState } from "../store";
 import { ITodo } from "../types";
-import { addTodo } from "../store/todo";
+// import { addTodo } from "../store/todo";
+import { useTodo } from "../hooks/todo";
 // import { useDatabase } from "../hooks/database";
 
 function App() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const todos = useSelector<RootState, ITodo[]>((state) => state.todo.todos);
-  const dispatch = useDispatch();
+  // const todos = useSelector<RootState, ITodo[]>((state) => state.todo.todos);
+  const { todos, addTodo } = useTodo();
+  const sortedTodos = useMemo(() => {
+    const _todos = [...todos];
+    return _todos?.sort((first, second) => {
+      return (
+        (second?.updatedAt || second?.createdAt) -
+        (first?.updatedAt || first.createdAt)
+      );
+    });
+  }, [todos]);
+  // const dispatch = useDispatch();
   function storeTodo() {
     const payload: ITodo = {
       id: Date.now(),
       title,
       description,
       createdAt: Date.now(),
-      priority: "medium",
     };
-    dispatch(addTodo(payload));
+    addTodo(payload);
   }
   return (
     <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
@@ -103,7 +113,7 @@ function App() {
         </form>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {todos.map((todo) => (
+        {sortedTodos.map((todo) => (
           <TodoCard {...todo} key={todo.id} />
         ))}
       </div>
