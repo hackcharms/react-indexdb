@@ -6,9 +6,9 @@ function Hero() {
       <div className="absolute inset-0 max-w-7xl top-10 px-7">
         <div className="flex item-start">
           <div className="flex flex-col justify-center items-center">
-            <div className="w-5 h-5 bg-primary rounded-full" />
-            <div className="w-1 h-32 bg-gradient-to-b from-primary via-transparent to-primary" />
-            <div className="w-5 h-5 bg-primary rounded-full" />
+            <div className="w-5 h-5 border-[0.25rem] border-primary rounded-full" />
+            <div className="w-1 h-64 bg-gradient-to-b from-primary via-transparent to-primary" />
+            <div className="w-5 h-5 border-[0.25rem] border-primary rounded-full" />
           </div>
           <div className="px-4">
             <h1 className="text-[5rem] text-secondary">
