@@ -4,6 +4,16 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "./Loader";
 import { SphereGeometry } from "three";
 function Computer() {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width:500px)");
+    setIsMobile(mediaQuery.matches);
+    const handleMediaChange = (event: MediaQueryListEvent) => {
+      setIsMobile(event.matches);
+    };
+    mediaQuery.addEventListener("change", handleMediaChange);
+    return () => mediaQuery.removeEventListener("change", handleMediaChange);
+  }, []);
   const computer = useGLTF("/public/desktop_pc/scene.gltf");
   return (
     <mesh>
@@ -17,8 +27,8 @@ function Computer() {
       /> */}
       <primitive
         object={computer.scene}
-        scale={0.75}
-        position={[0, -1.25, 1.5]}
+        scale={isMobile ? 0.4 : 0.75}
+        position={isMobile ? [-1, -5, -0.5] : [-1, -3.5, -0.5]}
         rotation={[0, -Math.PI / 16, -Math.PI / 16]}
       />
     </mesh>

@@ -19,7 +19,7 @@ export default function Navbar() {
     },
   ];
   return (
-    <nav className="bg-gradient-to-br from-primary-900 to-primary-600 border-gray-200 dark:bg-gray-900 flex-grow-0">
+    <nav className="bg-gradient-to-br from-primary-600 via-primary-800 to-primary-600 border-gray-200 dark:bg-gray-900 flex-grow-0">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link
           to="/"

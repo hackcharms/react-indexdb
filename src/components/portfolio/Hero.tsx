@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import ComputerCanvas from "./canvas/Computer";
 
 function Hero() {
@@ -22,6 +23,23 @@ function Hero() {
         </div>
       </div>
       <ComputerCanvas />
+      <div className="absolute z-10 bottom-30 xs:bottom-10 w-full flex justify-center items-center">
+        <a href="#about">
+          <div className="w-8 h-16 rounded-full p-1 border-2 border-primary flex justify-center ">
+            <motion.div
+              animate={{
+                y: [0, 60, -30],
+              }}
+              transition={{
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: 1.5,
+              }}
+              className="w-3 h-3 rounded-full bg-light transition-transform "
+            />
+          </div>
+        </a>
+      </div>
     </div>
   );
 }
