@@ -14,7 +14,7 @@ function ServiceCard({ index, title, icon }: ServiceCardProps) {
     <Tilt className="xs:w-[250px]">
       <motion.div
         variants={fadeIn("right", "spring", 0.5 * index, 1)}
-        className="w-full bg-gradient-to-tr from-blue-500 to-red-500 p-[1px] rounded-lg shadow shadow-slate-500"
+        className="w-full rounded-lg bg-gradient-to-tr from-blue-500 to-red-500 p-px shadow shadow-slate-500"
       >
         <div
           options={{
@@ -22,9 +22,9 @@ function ServiceCard({ index, title, icon }: ServiceCardProps) {
             scale: 1,
             speed: 450,
           }}
-          className="bg-primary-600 bg-opacity-70 rounded-xl p-3 flex flex-col justify-center items-center"
+          className="flex flex-col items-center justify-center rounded-xl bg-primary-600 bg-opacity-70 p-3"
         >
-          <img src={icon} alt={title} className="w-16 h-16 object-contain" />
+          <img src={icon} alt={title} className="size-16 object-contain" />
           <h3>{title}</h3>
         </div>
       </motion.div>
@@ -40,7 +40,7 @@ function About() {
       </motion.div>
       <motion.p
         variants={fadeIn("right", "", 0.1, 1)}
-        className="mt-4 text-lg leading-5 max-w-3xl text-secondary"
+        className="mt-4 max-w-3xl text-lg leading-5 text-secondary"
       >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
         laudantium sed iusto ab enim unde, veniam placeat error cum voluptas
@@ -53,7 +53,7 @@ function About() {
 }
 function Services() {
   return (
-    <div className="mt-20 flex flex-wrap justify-center items-center gap-10">
+    <div className="mt-20 flex flex-wrap items-center justify-center gap-10">
       {services.map((service, index) => {
         return <ServiceCard {...service} index={index} key={index} />;
       })}

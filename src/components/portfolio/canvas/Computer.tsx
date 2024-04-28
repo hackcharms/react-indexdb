@@ -2,7 +2,7 @@ import { Suspense, useState, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "./Loader";
-import { SphereGeometry } from "three";
+// import { SphereGeometry } from "three";
 function Computer() {
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
@@ -34,21 +34,21 @@ function Computer() {
     </mesh>
   );
 }
-function Sphare() {
-  return (
-    <mesh
-      visible
-      userData={{ hello: "world" }}
-      position={[1, 1, 1]}
-      rotation={[Math.PI / 2, Math.PI / 2, Math.PI / 2]}
-    >
-      <sphereGeometry args={[1, 16, 16]} />
-      <meshStandardMaterial color="hotpink" transparent />
-      <spotLight color={0xff000f} position={[2, 1, 1]} />
-      <pointLight color={0x00ff00} intensity={1} position={[0, 1, 1]} />
-    </mesh>
-  );
-}
+// function Sphare() {
+//   return (
+//     <mesh
+//       visible
+//       userData={{ hello: "world" }}
+//       position={[1, 1, 1]}
+//       rotation={[Math.PI / 2, Math.PI / 2, Math.PI / 2]}
+//     >
+//       <sphereGeometry args={[1, 16, 16]} />
+//       <meshStandardMaterial color="hotpink" transparent />
+//       <spotLight color={0xff000f} position={[2, 1, 1]} />
+//       <pointLight color={0x00ff00} intensity={1} position={[0, 1, 1]} />
+//     </mesh>
+//   );
+// }
 function ComputerCanvas() {
   return (
     <Canvas

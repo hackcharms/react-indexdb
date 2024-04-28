@@ -40,30 +40,33 @@ import {
   nodejs,
   mongodb,
   git,
-  figma,
   docker,
   tcw,
   starbucks,
-  tesla,
-  shopify,
   carrent,
   jobit,
   tripguide,
   threejs,
+  vuejs,
+  nuxtjs,
+  pinia,
+  vuetify,
+  laravel,
+  mysql,
 } from "../assets";
 
 export const navLinks = [
   {
-    id: "about",
-    title: "About",
+    path: "#about",
+    label: "About",
   },
   {
-    id: "work",
-    title: "Work",
+    path: "#work",
+    label: "Work",
   },
   {
-    id: "contact",
-    title: "Contact",
+    path: "#contact",
+    label: "Contact",
   },
 ];
 
@@ -101,19 +104,19 @@ const technologies = [
   },
   {
     name: "Vue JS",
-    icon: reactjs,
+    icon: vuejs,
   },
   {
     name: "Nuxt JS",
-    icon: reactjs,
+    icon: nuxtjs,
   },
   {
     name: "Pinia",
-    icon: redux,
+    icon: pinia,
   },
   {
     name: "Vuetify",
-    icon: redux,
+    icon: vuetify,
   },
   {
     name: "React JS",
@@ -141,7 +144,11 @@ const technologies = [
   },
   {
     name: "Laravel",
-    icon: nodejs,
+    icon: laravel,
+  },
+  {
+    name: "MySql",
+    icon: mysql,
   },
   {
     name: "MongoDB",

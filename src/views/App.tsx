@@ -2,14 +2,13 @@ import ContactUs from "../components/portfolio/ContactUs";
 import Experience from "../components/portfolio/Experience";
 import Hero from "../components/portfolio/Hero";
 import Work from "../components/portfolio/Work";
-import Starts from "../components/portfolio/Starts";
+// import Starts from "../components/portfolio/Starts";
 import Tech from "../components/portfolio/Tech";
 import About from "./About";
 
 function App() {
   return (
     <div>
-      <h1>Hello App</h1>
       <div className="bg-hero-pattern">
         <Hero />
         <About />
@@ -19,7 +18,7 @@ function App() {
       <Work />
       <div className="relative z-0">
         <ContactUs />
-        <Starts />
+        {/* <Starts /> */}
       </div>
     </div>
   );

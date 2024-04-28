@@ -1,2 +1,2 @@
-type TransitionDirection = "up" | "down" | "left" | "right";
-type TransitionType = "spring" | "tween" | "inertia";
+export type TransitionDirection = "up" | "down" | "left" | "right";
+export type TransitionType = "spring" | "tween" | "inertia";

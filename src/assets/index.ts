@@ -20,6 +20,12 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import laravel from "./tech/laravel.svg";
+import vuejs from "./tech/vuejs.svg";
+import nuxtjs from "./tech/nuxtjs.svg";
+import pinia from "./tech/pinia.svg";
+import mysql from "./tech/mysql.svg";
+import vuetify from "./tech/vuetify.svg";
 
 import tcw from "./company/tcw.png";
 import shopify from "./company/shopify.png";
@@ -59,4 +65,10 @@ export {
   carrent,
   jobit,
   tripguide,
+  mysql,
+  vuejs,
+  nuxtjs,
+  pinia,
+  vuetify,
+  laravel,
 };

@@ -1,3 +1,5 @@
+import { TransitionDirection, TransitionType } from "../types/motion";
+
 export const textVariant = (delay: number) => {
   return {
     hidden: {
@@ -86,8 +88,8 @@ export const slideIn = (
 };
 
 export const staggerContainer = (
-  staggerChildren: any,
-  delayChildren: number
+  staggerChildren?: any,
+  delayChildren?: number
 ) => {
   return {
     hidden: {},

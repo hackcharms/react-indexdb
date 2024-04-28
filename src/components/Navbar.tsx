@@ -1,43 +1,31 @@
 import { useState } from "react";
-import { Link, Route } from "react-router-dom";
-
+import { Link } from "react-router-dom";
+import { navLinks } from "../constants";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   // const [isOpenLanguage, setIsOpenLanguage] = useState(false);
-  const LINKS: { path: string; label: string }[] = [
-    {
-      path: "/",
-      label: "Home",
-    },
-    {
-      path: "/about",
-      label: "About",
-    },
-    {
-      path: "/dummy",
-      label: "Dummy",
-    },
-  ];
+
   return (
-    <nav className="bg-gradient-to-br from-primary-600 via-primary-800 to-primary-600 border-gray-200 dark:bg-gray-900 flex-grow-0">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <nav className="grow-0 border-gray-200 dark:bg-gray-900">
+      <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
         <Link
           to="/"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
           <img src="/public/img/circuit-board.svg" className="h-8" alt="logo" />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            Flowbite
+          <span className="self-center whitespace-nowrap text-2xl font-semibold dark:text-white">
+            Home
           </span>
         </Link>
-        <div className="flex items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse">
+        <div className="flex items-center space-x-1 md:order-2 md:space-x-0 rtl:space-x-reverse">
           <button
             type="button"
+            style={{ display: "none" }}
             data-dropdown-toggle="language-dropdown-menu"
-            className="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-gray-900 dark:text-white rounded-lg cursor-pointer  dark:hover:text-white"
+            className="inline-flex cursor-pointer items-center justify-center rounded-lg px-4 py-2 text-sm font-medium text-gray-900 dark:text-white  dark:hover:text-white"
           >
             <svg
-              className="w-5 h-5 rounded-full me-3"
+              className="me-3 size-5 rounded-full"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -78,7 +66,7 @@ export default function Navbar() {
           </button>
           {/* <!-- Dropdown --> */}
           <div
-            className="z-50 hidden my-4 text-base list-none divide-y divide-gray-100 rounded-lg shadow "
+            className="z-50 my-4 hidden list-none divide-y divide-gray-100 rounded-lg text-base shadow "
             id="language-dropdown-menu"
           >
             <ul className="py-2 font-medium" role="none">
@@ -91,7 +79,7 @@ export default function Navbar() {
                   <div className="inline-flex items-center">
                     <svg
                       aria-hidden="true"
-                      className="h-3.5 w-3.5 rounded-full me-2"
+                      className="me-2 size-3.5 rounded-full"
                       xmlns="http://www.w3.org/2000/svg"
                       id="flag-icon-css-us"
                       viewBox="0 0 512 512"
@@ -125,122 +113,19 @@ export default function Navbar() {
                   </div>
                 </a>
               </li>
-              <li>
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-sm text-gray-700  dark:text-gray-400  dark:hover:text-white"
-                  role="menuitem"
-                >
-                  <div className="inline-flex items-center">
-                    <svg
-                      className="h-3.5 w-3.5 rounded-full me-2"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      id="flag-icon-css-de"
-                      viewBox="0 0 512 512"
-                    >
-                      <path fill="#ffce00" d="M0 341.3h512V512H0z" />
-                      <path d="M0 0h512v170.7H0z" />
-                      <path fill="#d00" d="M0 170.7h512v170.6H0z" />
-                    </svg>
-                    Deutsch
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-sm text-gray-700  dark:text-gray-400  dark:hover:text-white"
-                  role="menuitem"
-                >
-                  <div className="inline-flex items-center">
-                    <svg
-                      className="h-3.5 w-3.5 rounded-full me-2"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      id="flag-icon-css-it"
-                      viewBox="0 0 512 512"
-                    >
-                      <g fillRule="evenodd" strokeWidth="1pt">
-                        <path fill="#fff" d="M0 0h512v512H0z" />
-                        <path fill="#009246" d="M0 0h170.7v512H0z" />
-                        <path fill="#ce2b37" d="M341.3 0H512v512H341.3z" />
-                      </g>
-                    </svg>
-                    Italiano
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-sm text-gray-700  dark:text-gray-400  dark:hover:text-white"
-                  role="menuitem"
-                >
-                  <div className="inline-flex items-center">
-                    <svg
-                      className="h-3.5 w-3.5 rounded-full me-2"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlnsXlink="http://www.w3.org/1999/xlink"
-                      id="flag-icon-css-cn"
-                      viewBox="0 0 512 512"
-                    >
-                      <defs>
-                        <path
-                          id="a"
-                          fill="#ffde00"
-                          d="M1-.3L-.7.8 0-1 .6.8-1-.3z"
-                        />
-                      </defs>
-                      <path fill="#de2910" d="M0 0h512v512H0z" />
-                      <use
-                        width="30"
-                        height="20"
-                        transform="matrix(76.8 0 0 76.8 128 128)"
-                        xlinkHref="#a"
-                      />
-                      <use
-                        width="30"
-                        height="20"
-                        transform="rotate(-121 142.6 -47) scale(25.5827)"
-                        xlinkHref="#a"
-                      />
-                      <use
-                        width="30"
-                        height="20"
-                        transform="rotate(-98.1 198 -82) scale(25.6)"
-                        xlinkHref="#a"
-                      />
-                      <use
-                        width="30"
-                        height="20"
-                        transform="rotate(-74 272.4 -114) scale(25.6137)"
-                        xlinkHref="#a"
-                      />
-                      <use
-                        width="30"
-                        height="20"
-                        transform="matrix(16 -19.968 19.968 16 256 230.4)"
-                        xlinkHref="#a"
-                      />
-                    </svg>
-                    中文 (繁體)
-                  </div>
-                </a>
-              </li>
             </ul>
           </div>
           <button
             data-collapse-toggle="navbar-language"
             type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400  dark:focus:ring-gray-600"
+            className="inline-flex size-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 focus:outline-none focus:ring-2  focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600 md:hidden"
             aria-controls="navbar-language"
             aria-expanded="false"
+            onClick={() => setIsOpen(!isOpen)}
           >
             <span className="sr-only">Open main menu</span>
             <svg
-              className="w-5 h-5"
+              className="size-5"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -257,20 +142,17 @@ export default function Navbar() {
           </button>
         </div>
         <div
-          className={
-            isOpen
-              ? "block"
-              : "hidden" +
-                " items-center justify-between w-full md:flex md:w-auto md:order-1"
-          }
+          className={`${
+            isOpen ? "block" : "hidden"
+          } w-full items-center justify-between md:order-1 md:flex md:w-auto`}
           id="navbar-language"
         >
-          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0   dark:border-gray-700">
-            {LINKS.map(({ path, label }) => (
+          <ul className="mt-4 flex flex-col rounded-lg border border-gray-100 p-4 font-medium dark:border-gray-700  md:mt-0 md:flex-row md:space-x-8 md:border-0 md:p-0   rtl:space-x-reverse">
+            {navLinks.map(({ path, label }) => (
               <li key={label}>
                 <Link
                   to={path}
-                  className="block py-2 px-3 text-white  rounded md:text-primary md:p-0 md:dark:text-primary"
+                  className="block rounded px-3 py-2  text-white md:p-0 md:text-primary md:dark:text-primary"
                   aria-current="page"
                 >
                   {label}
