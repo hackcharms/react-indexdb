@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ITodo } from "../../types";
-import { FormEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 import { useTodo } from "../../hooks/todo";
 import PrioritySelector from "./PrioritySelector";
 import { TaskPriority } from "../../enums";
@@ -33,38 +33,38 @@ function TodoCard({
     };
     updateTodo(id, updatedTask);
   }
-  const handleChange = (callback: Function) => {
-    return (event: any) => {
-      callback((event.target as HTMLInputElement | HTMLTextAreaElement).value);
+  const handleChange = (callback: (value: string) => void) => {
+    return (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+      callback(event.target.value);
     };
   };
   return (
-    <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div className="max-w-sm rounded-lg border border-gray-200 bg-white p-6 shadow dark:border-gray-700 dark:bg-gray-800">
       <div className="flex justify-between ">
         <PrioritySelector setPriority={setPriority} priority={_priority} />
       </div>
-      <form onSubmit={updateCard} className="max-w-sm mx-auto">
+      <form onSubmit={updateCard} className="mx-auto max-w-sm">
         <input
-          className="shadow-sm border border-transparent focus:bg-gray-100 text-gray-900 text-xl font-bold rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light "
+          className="dark:shadow-sm-light block w-full rounded-lg border border-transparent p-2.5 text-xl font-bold text-gray-900 shadow-sm focus:border-blue-500 focus:bg-gray-100 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500 "
           value={_title}
           onChange={handleChange(_setTitle)}
         />
         <hr />
         <textarea
           rows={4}
-          className="block p-2.5 w-full text-sm text-gray-900 focus:bg-gray-100 rounded-lg border border-transparent border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          className="block w-full rounded-lg border border-gray-300 border-transparent p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:bg-gray-100 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
           placeholder="Task description here..."
           value={_description}
           onChange={handleChange(_setDescription)}
         />
-        <div className="text-end my-2">
+        <div className="my-2 text-end">
           <Button variant="solid" type="submit" onClick={updateCard}>
             Update
           </Button>
         </div>
       </form>
       <Link to={"/cards/" + id}>See more details</Link>
-      <div className="flex justify-between mt-2 -mb-2">
+      <div className="-mb-2 mt-2 flex justify-between">
         <span className="text-xs font-thin"> createdAt:{createdAt}</span>
         <span className="text-xs font-thin"> updatedAt:{updatedAt}</span>
         <span className="text-xs font-thin">expiredAt:{expiredAt}</span>

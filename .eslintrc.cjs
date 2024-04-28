@@ -5,11 +5,21 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react-hooks/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:tailwindcss/recommended',
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
-  plugins: ['react-refresh'],
+  plugins: ['react-refresh','eslint-plugin-tailwindcss'],
   rules: {
+    'tailwindcss/classnames-order': 'warn',
+    "tailwindcss/no-custom-classname": [
+            "warn",
+            {
+                cssFiles: ["src/**/*.css"],
+                callees: ["classnames", "clsx", "twMerge", "cn"],
+            },
+        ],
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },

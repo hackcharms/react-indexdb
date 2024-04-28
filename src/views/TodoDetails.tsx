@@ -24,8 +24,8 @@ export default function TodoDetails() {
         <p className="text-base text-gray-700 dark:text-gray-100">
           {cardDetails?.description}
         </p>
-        <div className="flex items-center mt-2.5 mb-5">
-          <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">
+        <div className="mb-5 mt-2.5 flex items-center">
+          <span className="ms-3 rounded bg-blue-100 px-2.5 py-0.5 text-xs font-semibold text-blue-800 dark:bg-blue-200 dark:text-blue-800">
             {cardDetails?.createdAt?.toString()}
           </span>
         </div>
@@ -39,7 +39,7 @@ export default function TodoDetails() {
           )}
           <a
             href="#"
-            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            className="rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
             Add to cart
           </a>

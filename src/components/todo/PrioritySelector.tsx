@@ -36,11 +36,11 @@ function PrioritySelector({
     >
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="px-4 py-2 text-sm font-medium text-black border  inline-flex rounded-s-lg hover:text-blue-700 focus:z-10 items-center focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white"
+        className="inline-flex items-center rounded-s-lg border px-4 py-2  text-sm font-medium text-black hover:text-blue-700 focus:z-10 focus:text-blue-700 focus:ring-2 focus:ring-blue-700 dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white dark:focus:text-white dark:focus:ring-blue-500"
       >
         {priorityLabelMap[priority]}
         <svg
-          className="w-2.5 h-2.5 ms-3"
+          className="ms-3 size-2.5"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -72,7 +72,7 @@ function PrioritySelector({
             <li key={_priority.id}>
               <button
                 onClick={() => handleChange(_priority.id)}
-                className={`w-full px-4 py-2 bg-${_priority.color}-100 hover:bg-${_priority.color}-200 dark:hover:bg-${_priority.color}-600 dark:hover:text-white`}
+                className={`w-full px-4 py-2 ${_priority.color}-100 hover:bg-${_priority.color}-200 dark:hover:bg-${_priority.color}-600 dark:hover:text-white`}
               >
                 {_priority.name}
               </button>
@@ -84,13 +84,13 @@ function PrioritySelector({
         disabled={priority === TaskPriority.URGENT}
         type="button"
         onClick={() => handleChange(priority + 1)}
-        className="p-2 text-sm font-medium text-gray-900  border disabled:opacity-50 border-gray-200 rounded-e-lg hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white"
+        className="rounded-e-lg border border-gray-200 p-2  text-sm font-medium text-gray-900 hover:text-blue-700 focus:z-10 focus:text-blue-700 focus:ring-2 focus:ring-blue-700 disabled:opacity-50 dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white dark:focus:text-white dark:focus:ring-blue-500"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
-          className="w-6 h-6"
+          className="size-6"
         >
           <path
             fillRule="evenodd"
