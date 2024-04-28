@@ -8,8 +8,8 @@ import About from "./About";
 
 function App() {
   return (
-    <div>
-      <div className="bg-hero-pattern">
+    <div className="">
+      <div className="">
         <Hero />
         <About />
       </div>

@@ -61,6 +61,14 @@ export const navLinks = [
     label: "About",
   },
   {
+    path: "#experience",
+    label: "Experience",
+  },
+  {
+    path: "#technologies",
+    label: "Tech Stacks",
+  },
+  {
     path: "#work",
     label: "Work",
   },
@@ -77,15 +85,11 @@ const services = [
   },
   {
     title: "Front-end Developer",
-    icon: mobile,
-  },
-  {
-    title: "React Developer",
-    icon: mobile,
-  },
-  {
-    title: "Backend Developer",
     icon: backend,
+  },
+  {
+    title: "Vuejs Developer",
+    icon: mobile,
   },
   {
     title: "Full stack developer",

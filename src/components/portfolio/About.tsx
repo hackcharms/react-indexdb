@@ -25,7 +25,7 @@ function ServiceCard({ index, title, icon }: ServiceCardProps) {
           className="flex flex-col items-center justify-center rounded-xl bg-primary-600 bg-opacity-70 p-3"
         >
           <img src={icon} alt={title} className="size-16 object-contain" />
-          <h3>{title}</h3>
+          <h3 className="text-lg text-balance">{title}</h3>
         </div>
       </motion.div>
     </Tilt>
@@ -61,4 +61,4 @@ function Services() {
   );
 }
 
-export default SectionWrapper(About, "About");
+export default SectionWrapper(About, "about");

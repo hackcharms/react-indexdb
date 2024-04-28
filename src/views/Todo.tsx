@@ -89,7 +89,7 @@ function Todo() {
                 <button
                   type="button"
                   onClick={storeTodo}
-                  className="mb-2 me-2 inline-flex items-center rounded-lg bg-[#3b5998] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-[#3b5998]/90 focus:outline-none focus:ring-4 focus:ring-[#3b5998]/50 dark:focus:ring-[#3b5998]/55"
+                  className="mb-2 me-2 inline-flex items-center rounded-lg bg-secondary px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-secondary/90 focus:outline-none focus:ring-4 focus:ring-secondary/50 dark:focus:ring-secondary/55"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

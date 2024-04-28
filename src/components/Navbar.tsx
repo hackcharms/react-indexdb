@@ -6,14 +6,14 @@ export default function Navbar() {
   // const [isOpenLanguage, setIsOpenLanguage] = useState(false);
 
   return (
-    <nav className="grow-0 border-gray-200 dark:bg-gray-900">
+    <nav className="grow-0 border-gray-200 shadow-lg bg-primary bg-opacity-20 backdrop-blur-sm sticky top-0 z-40">
       <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
         <Link
           to="/"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
           <img src="/public/img/circuit-board.svg" className="h-8" alt="logo" />
-          <span className="self-center whitespace-nowrap text-2xl font-semibold dark:text-white">
+          <span className="self-center whitespace-nowrap text-2xl font-semibold text-primary-200 ">
             Home
           </span>
         </Link>
@@ -22,7 +22,7 @@ export default function Navbar() {
             type="button"
             style={{ display: "none" }}
             data-dropdown-toggle="language-dropdown-menu"
-            className="inline-flex cursor-pointer items-center justify-center rounded-lg px-4 py-2 text-sm font-medium text-gray-900 dark:text-white  dark:hover:text-white"
+            className="inline-flex cursor-pointer items-center justify-center rounded-lg px-4 py-2 text-sm font-medium text-primary-200 hover:text-primary-300"
           >
             <svg
               className="me-3 size-5 rounded-full"
@@ -73,7 +73,7 @@ export default function Navbar() {
               <li>
                 <a
                   href="#"
-                  className="block px-4 py-2 text-sm text-gray-700  dark:text-gray-400 dark:hover:text-white"
+                  className="block px-4 py-2 text-sm text-primary-200  dark:text-primary-200 dark:hover:text-white"
                   role="menuitem"
                 >
                   <div className="inline-flex items-center">
@@ -118,7 +118,7 @@ export default function Navbar() {
           <button
             data-collapse-toggle="navbar-language"
             type="button"
-            className="inline-flex size-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 focus:outline-none focus:ring-2  focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600 md:hidden"
+            className="inline-flex size-10 items-center justify-center rounded-lg p-2 text-sm text-primary-200 focus:outline-none focus:ring-2  focus:ring-gray-200 dark:text-primary-200 dark:focus:ring-gray-600 md:hidden"
             aria-controls="navbar-language"
             aria-expanded="false"
             onClick={() => setIsOpen(!isOpen)}
@@ -150,13 +150,23 @@ export default function Navbar() {
           <ul className="mt-4 flex flex-col rounded-lg border border-gray-100 p-4 font-medium dark:border-gray-700  md:mt-0 md:flex-row md:space-x-8 md:border-0 md:p-0   rtl:space-x-reverse">
             {navLinks.map(({ path, label }) => (
               <li key={label}>
-                <Link
-                  to={path}
-                  className="block rounded px-3 py-2  text-white md:p-0 md:text-primary md:dark:text-primary"
-                  aria-current="page"
-                >
-                  {label}
-                </Link>
+                {path.startsWith("#") ? (
+                  <a
+                    href={path}
+                    className="block rounded px-3 py-2  text-primary-200 hover:text-primary-400 md:p-0 "
+                    aria-current="page"
+                  >
+                    {label}
+                  </a>
+                ) : (
+                  <Link
+                    to={path}
+                    className="block rounded px-3 py-2  text-primary-200 hover:text-primary-400 md:p-0 "
+                    aria-current="page"
+                  >
+                    {label}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
