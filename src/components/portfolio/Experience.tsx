@@ -29,7 +29,7 @@ const ExperienceCard = ({
           <img
             src={experience.icon}
             alt={experience.company_name}
-            className="size-3/5 object-contain"
+            className="size-4/5 object-contain"
           />
         </div>
       }

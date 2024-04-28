@@ -28,9 +28,7 @@ import mysql from "./tech/mysql.svg";
 import vuetify from "./tech/vuetify.svg";
 
 import tcw from "./company/tcw.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+import credilio from "./company/credilio.webp";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -59,9 +57,7 @@ export {
   typescript,
   threejs,
   tcw,
-  shopify,
-  starbucks,
-  tesla,
+  credilio,
   carrent,
   jobit,
   tripguide,
