@@ -12,7 +12,7 @@ export default function Navbar() {
           to="/"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
-          <img src="/public/img/circuit-board.svg" className="h-8" alt="logo" />
+          <img src="./img/circuit-board.svg" className="h-8" alt="logo" />
           <span className="self-center whitespace-nowrap text-2xl font-semibold text-primary-200 ">
             Home
           </span>
