@@ -35,7 +35,7 @@ function Hero() {
                 repeatType: "loop",
                 duration: 1.5,
               }}
-              className="bg-secondary-500 size-3 rounded-full transition-transform "
+              className="size-3 rounded-full bg-secondary-500 transition-transform "
             />
           </div>
         </a>

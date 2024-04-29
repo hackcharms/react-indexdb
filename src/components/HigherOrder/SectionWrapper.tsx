@@ -1,7 +1,11 @@
 import { motion } from "framer-motion";
 import { staggerContainer } from "../../utils/motion";
 import { styles } from "../../constants/styles";
-function SectionWrapper(Component: any, idName: string) {
+import { JSXElementConstructor } from "react";
+function SectionWrapper(
+  Component: JSXElementConstructor<unknown>,
+  idName: string
+) {
   return function HOC() {
     return (
       <motion.section

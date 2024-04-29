@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../../utils/motion";
 import { styles } from "../../constants/styles";
 import { Tilt } from "react-tilt";
-import { experiences, services } from "../../constants";
+import { services } from "../../constants";
 import SectionWrapper from "../HigherOrder/SectionWrapper";
 type ServiceCardProps = {
   index: number;
@@ -17,15 +17,15 @@ function ServiceCard({ index, title, icon }: ServiceCardProps) {
         className="w-full rounded-lg bg-gradient-to-tr from-blue-500 to-red-500 p-px shadow shadow-slate-500"
       >
         <div
-          options={{
-            max: 45,
-            scale: 1,
-            speed: 450,
-          }}
+          // options={{
+          //   max: 45,
+          //   scale: 1,
+          //   speed: 450,
+          // }}
           className="flex flex-col items-center justify-center rounded-xl bg-primary-600 bg-opacity-70 p-3"
         >
           <img src={icon} alt={title} className="size-16 object-contain" />
-          <h3 className="text-lg text-balance">{title}</h3>
+          <h3 className="text-balance text-lg">{title}</h3>
         </div>
       </motion.div>
     </Tilt>
@@ -48,56 +48,56 @@ function About() {
         frontend and backend technologies like
         <a
           href="#"
-          className="font-semibold hover:underline pl-1 text-secondary "
+          className="pl-1 font-semibold text-secondary hover:underline "
         >
           JavaScript
         </a>
         ,
         <a
           href="#"
-          className="font-semibold hover:underline pl-1 text-secondary "
+          className="pl-1 font-semibold text-secondary hover:underline "
         >
           TypeScript
         </a>
         ,
         <a
           href="#"
-          className="font-semibold hover:underline pl-1 text-secondary "
+          className="pl-1 font-semibold text-secondary hover:underline "
         >
           Vue.js
         </a>
         ,
         <a
           href="#"
-          className="font-semibold hover:underline pl-1 text-secondary "
+          className="pl-1 font-semibold text-secondary hover:underline "
         >
           React.js
         </a>
         ,
         <a
           href="#"
-          className="font-semibold hover:underline pl-1 text-secondary "
+          className="pl-1 font-semibold text-secondary hover:underline "
         >
           Nuxt.js
         </a>
         ,
         <a
           href="#"
-          className="font-semibold hover:underline pl-1 text-secondary "
+          className="pl-1 font-semibold text-secondary hover:underline "
         >
           MySQL
         </a>
         ,
         <a
           href="#"
-          className="font-semibold hover:underline pl-1 text-secondary "
+          className="pl-1 font-semibold text-secondary hover:underline "
         >
           PHP
         </a>
         , and
         <a
           href="#"
-          className="font-semibold hover:underline pl-1 text-secondary "
+          className="pl-1 font-semibold text-secondary hover:underline "
         >
           Laravel
         </a>
