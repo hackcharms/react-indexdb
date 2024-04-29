@@ -45,14 +45,14 @@ function TodoCard({
       </div>
       <form onSubmit={updateCard} className="mx-auto max-w-sm">
         <input
-          className="dark:shadow-sm-light block w-full rounded-lg border border-transparent p-2.5 text-xl font-bold text-gray-900 shadow-sm focus:border-blue-500 focus:bg-gray-100 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500 "
+          className="dark:shadow-sm-light block w-full rounded-lg border p-2.5 text-xl font-bold text-gray-900 shadow-sm focus:border-blue-500 focus:bg-gray-100 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500 "
           value={_title}
           onChange={handleChange(_setTitle)}
         />
         <hr />
         <textarea
           rows={4}
-          className="block w-full rounded-lg border border-gray-300 border-transparent p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:bg-gray-100 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+          className="block w-full rounded-lg border border-gray-300 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:bg-gray-100 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
           placeholder="Task description here..."
           value={_description}
           onChange={handleChange(_setDescription)}

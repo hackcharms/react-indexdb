@@ -12,7 +12,7 @@ const Tech = () => {
         <Tilt key={name}>
           <motion.div
             variants={fadeIn("right", "spring", 0.25 * index, 1)}
-            className=" flex flex-col justify-center items-center rounded-xl text-center bg-opacity-0 px-4 py-2 shadow-lg ring-1 ring-secondary/20 backdrop-blur-lg"
+            className=" flex flex-col items-center justify-center rounded-xl bg-opacity-0 px-4 py-2 text-center shadow-lg ring-1 ring-secondary/20 backdrop-blur-lg"
           >
             <img src={icon} alt={name} className="size-28 object-contain p-1" />
             <h1 className="text-center font-mono text-lg font-bold tracking-wide text-secondary-400">

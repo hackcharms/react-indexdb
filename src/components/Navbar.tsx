@@ -6,13 +6,13 @@ export default function Navbar() {
   // const [isOpenLanguage, setIsOpenLanguage] = useState(false);
 
   return (
-    <nav className="grow-0 border-gray-200 shadow-lg bg-primary bg-opacity-20 backdrop-blur-sm sticky top-0 z-40">
+    <nav className="sticky top-0 z-40 grow-0 border-gray-200 bg-primary bg-opacity-20 shadow-lg backdrop-blur-sm">
       <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
         <Link
           to="/"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
-          <img src="/public/img/circuit-board.svg" className="h-8" alt="logo" />
+          <img src="./img/circuit-board.svg" className="h-8" alt="logo" />
           <span className="self-center whitespace-nowrap text-2xl font-semibold text-primary-200 ">
             Home
           </span>

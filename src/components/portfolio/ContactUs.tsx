@@ -6,7 +6,7 @@ import EarthCanvas from "./canvas/Earth";
 import SectionWrapper from "../HigherOrder/SectionWrapper";
 
 const Contact = () => {
-  const formRef = useRef<HTMLFormElement>();
+  const formRef = useRef<HTMLFormElement>(null);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -87,7 +87,7 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               placeholder="What's your good name?"
-              className="bg-primary-800 rounded-lg border-none px-6 py-4 font-medium text-white outline-none placeholder:text-secondary"
+              className="rounded-lg border-none bg-primary-800 px-6 py-4 font-medium text-white outline-none placeholder:text-secondary"
             />
           </label>
           <label className="flex flex-col">
@@ -98,7 +98,7 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               placeholder="What's your web address?"
-              className="bg-primary-800 rounded-lg border-none px-6 py-4 font-medium text-white outline-none placeholder:text-secondary"
+              className="rounded-lg border-none bg-primary-800 px-6 py-4 font-medium text-white outline-none placeholder:text-secondary"
             />
           </label>
           <label className="flex flex-col">
@@ -109,13 +109,13 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder="What you want to say?"
-              className="bg-primary-800 rounded-lg border-none px-6 py-4 font-medium text-white outline-none placeholder:text-secondary"
+              className="rounded-lg border-none bg-primary-800 px-6 py-4 font-medium text-white outline-none placeholder:text-secondary"
             />
           </label>
 
           <button
             type="submit"
-            className="bg-primary-800 w-fit rounded-xl px-8 py-3 font-bold text-white shadow-md shadow-primary outline-none"
+            className="w-fit rounded-xl bg-primary-800 px-8 py-3 font-bold text-white shadow-md shadow-primary outline-none"
           >
             {loading ? "Sending..." : "Send"}
           </button>
