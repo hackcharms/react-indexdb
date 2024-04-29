@@ -12,7 +12,7 @@ function Hero() {
             <div className="size-5 rounded-full border-[0.25rem] border-primary" />
           </div>
           <div className="px-4">
-            <h1 className="text-[5rem] text-secondary">
+            <h1 className="text-[5rem] text-secondary-300">
               Hi, Im <span className="text-primary">Ansari Zubair</span>
             </h1>
             <p className="text-balance text-xl">
