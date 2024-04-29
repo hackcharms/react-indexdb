@@ -6,7 +6,7 @@ import EarthCanvas from "./canvas/Earth";
 import SectionWrapper from "../HigherOrder/SectionWrapper";
 
 const Contact = () => {
-  const formRef = useRef<HTMLFormElement>();
+  const formRef = useRef<HTMLFormElement>(null);
   const [form, setForm] = useState({
     name: "",
     email: "",
