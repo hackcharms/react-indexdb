@@ -1,9 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../layouts/default";
-import Todo from "../views/Todo";
-import App from "../views/App";
+import Todo from "../views/todo/Todo.js";
+import MotionIndex from "../views/motion/App.jsx";
 import About from "../views/About";
-import TodoDetails from "../views/TodoDetails";
+import TodoDetails from "../views/todo/TodoDetails.js";
 export default createBrowserRouter([
   {
     path: "/",
@@ -11,7 +11,7 @@ export default createBrowserRouter([
     children: [
       {
         path: "",
-        Component: App,
+        Component: MotionIndex,
       },
       {
         path: "/todo",

@@ -1,10 +1,10 @@
 import { useMemo, useState } from "react";
-import TodoCard from "../components/todo/Card";
+import TodoCard from "../../components/todo/Card";
 // import { useDispatch, useSelector } from "react-redux";
 // import type { RootState } from "../store";
-import { ITodo } from "../types";
+import { ITodo } from "../../types";
 // import { addTodo } from "../store/todo";
-import { useTodo } from "../hooks/todo";
+import { useTodo } from "../../hooks/todo";
 // import { useDatabase } from "../hooks/database";
 
 function Todo() {

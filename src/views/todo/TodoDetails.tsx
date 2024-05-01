@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { ITodo } from "../types";
+import { ITodo } from "../../types";
 // import { useSelector } from "react-redux";
 // import { RootState } from "../store";
-import { useTodo } from "../hooks/todo";
+import { useTodo } from "../../hooks/todo";
 export default function TodoDetails() {
   const [cardDetails, setCardDetails] = useState<ITodo>();
   const { id } = useParams();
