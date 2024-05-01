@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { fadeIn, textVariant } from "../../utils/motion";
-import { styles } from "../../constants/styles";
+import { fadeIn, textVariant } from "../../../utils/motion";
+import { styles } from "../../../constants/styles";
 import { Tilt } from "react-tilt";
-import { services } from "../../constants";
-import SectionWrapper from "../HigherOrder/SectionWrapper";
+import { services } from "../../../constants";
+import SectionWrapper from "../../HigherOrder/SectionWrapper";
 type ServiceCardProps = {
   index: number;
   title: string;

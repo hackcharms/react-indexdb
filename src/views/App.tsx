@@ -1,9 +1,9 @@
-import ContactUs from "../components/portfolio/ContactUs";
-import Experience from "../components/portfolio/Experience";
-import Hero from "../components/portfolio/Hero";
-import Work from "../components/portfolio/Work";
+import ContactUs from "../components/portfolio/motion/ContactUs";
+import Experience from "../components/portfolio/motion/Experience";
+import Hero from "../components/portfolio/motion/Hero";
+import Work from "../components/portfolio/motion/Work";
 // import Starts from "../components/portfolio/Starts";
-import Tech from "../components/portfolio/Tech";
+import Tech from "../components/portfolio/motion/Tech";
 import About from "./About";
 
 function App() {
@@ -18,7 +18,6 @@ function App() {
       <Work />
       <div className="relative z-0">
         <ContactUs />
-        {/* <Starts /> */}
       </div>
     </div>
   );

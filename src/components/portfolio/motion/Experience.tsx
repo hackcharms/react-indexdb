@@ -4,11 +4,11 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { motion } from "framer-motion";
-import { textVariant } from "../../utils/motion";
+import { textVariant } from "../../../utils/motion";
 
-import { styles } from "../../constants/styles";
-import SectionWrapper from "../HigherOrder/SectionWrapper";
-import { experiences } from "../../constants";
+import { styles } from "../../../constants/styles";
+import SectionWrapper from "../../HigherOrder/SectionWrapper";
+import { experiences } from "../../../constants";
 
 const ExperienceCard = ({
   experience,

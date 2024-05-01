@@ -1,10 +1,10 @@
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
-import { fadeIn, textVariant } from "../../utils/motion";
-import { github } from "../../assets";
-import { styles } from "../../constants/styles";
-import { projects } from "../../constants";
-import SectionWrapper from "../HigherOrder/SectionWrapper";
+import { fadeIn, textVariant } from "../../../utils/motion";
+import { github } from "../../../assets";
+import { styles } from "../../../constants/styles";
+import { projects } from "../../../constants";
+import SectionWrapper from "../../HigherOrder/SectionWrapper";
 const ProjectCard = ({
   index,
   name,

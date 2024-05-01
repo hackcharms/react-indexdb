@@ -1,7 +1,7 @@
 import { Tilt } from "react-tilt";
-import { technologies } from "../../constants";
-import SectionWrapper from "../HigherOrder/SectionWrapper";
-import { fadeIn } from "../../utils/motion";
+import { technologies } from "../../../constants";
+import SectionWrapper from "../../HigherOrder/SectionWrapper";
+import { fadeIn } from "../../../utils/motion";
 import { motion } from "framer-motion";
 // import { BallCanvas } from "./canvas/";
 

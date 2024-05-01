@@ -1,9 +1,9 @@
 import { ChangeEvent, FormEvent, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { slideIn } from "../../utils/motion";
-import { styles } from "../../constants/styles";
+import { slideIn } from "../../../utils/motion";
+import { styles } from "../../../constants/styles";
 import EarthCanvas from "./canvas/Earth";
-import SectionWrapper from "../HigherOrder/SectionWrapper";
+import SectionWrapper from "../../HigherOrder/SectionWrapper";
 
 const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
