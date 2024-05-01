@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 
 export default function Footer(){
     return (
-      <footer className="relative m-4 grow-0 border border-primary bg-transparent text-primary shadow dark:bg-gray-800">
-        <span className="absolute -right-[0.3125rem] -top-[0.3125rem] size-3 rounded-full border border-primary bg-primary-900" />
-        <span className="absolute -bottom-[0.3125rem] -right-[0.3125rem] size-3 rounded-full border border-primary bg-primary-900" />
-        <span className="absolute -left-[0.3125rem] -top-[0.3125rem] size-3 rounded-full border border-primary bg-primary-800" />
-        <span className="absolute -bottom-[0.3125rem] -left-[0.3125rem] size-3 rounded-full border border-primary bg-primary-800" />
+      <footer className="relative m-4 grow-0 border border-motion-primary bg-transparent text-motion-primary shadow dark:bg-gray-800">
+        <span className="absolute -right-[0.3125rem] -top-[0.3125rem] size-3 rounded-full border border-motion-primary bg-motion-primary-900" />
+        <span className="absolute -bottom-[0.3125rem] -right-[0.3125rem] size-3 rounded-full border border-motion-primary bg-motion-primary-900" />
+        <span className="absolute -left-[0.3125rem] -top-[0.3125rem] size-3 rounded-full border border-motion-primary bg-motion-primary-800" />
+        <span className="absolute -bottom-[0.3125rem] -left-[0.3125rem] size-3 rounded-full border border-motion-primary bg-motion-primary-800" />
         <div className="mx-auto w-full max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
           <span className="text-sm  sm:text-center">
             © {new Date().getFullYear() + " "}

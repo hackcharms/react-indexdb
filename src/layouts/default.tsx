@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import Navbar from "../components/portfolio/motion/Navbar";
+import Navbar from "../components/Navbar";
 import Footer from "../components/portfolio/motion/Footer";
 import { Provider as ReduxProvider } from "react-redux";
 import store from "../store";

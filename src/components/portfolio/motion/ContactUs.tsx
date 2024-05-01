@@ -87,7 +87,7 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               placeholder="What's your good name?"
-              className="rounded-lg border-none bg-primary-800 px-6 py-4 font-medium text-white outline-none placeholder:text-secondary"
+              className="rounded-lg border-none bg-motion-primary-800 px-6 py-4 font-medium text-white outline-none placeholder:text-motion-secondary"
             />
           </label>
           <label className="flex flex-col">
@@ -98,7 +98,7 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               placeholder="What's your web address?"
-              className="rounded-lg border-none bg-primary-800 px-6 py-4 font-medium text-white outline-none placeholder:text-secondary"
+              className="rounded-lg border-none bg-motion-primary-800 px-6 py-4 font-medium text-white outline-none placeholder:text-motion-secondary"
             />
           </label>
           <label className="flex flex-col">
@@ -109,13 +109,13 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder="What you want to say?"
-              className="rounded-lg border-none bg-primary-800 px-6 py-4 font-medium text-white outline-none placeholder:text-secondary"
+              className="rounded-lg border-none bg-motion-primary-800 px-6 py-4 font-medium text-white outline-none placeholder:text-motion-secondary"
             />
           </label>
 
           <button
             type="submit"
-            className="w-fit rounded-xl bg-primary-800 px-8 py-3 font-bold text-white shadow-md shadow-primary outline-none"
+            className="w-fit rounded-xl bg-motion-primary-800 px-8 py-3 font-bold text-white shadow-md shadow-motion-primary outline-none"
           >
             {loading ? "Sending..." : "Send"}
           </button>

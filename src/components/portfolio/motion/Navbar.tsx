@@ -6,14 +6,14 @@ export default function Navbar() {
   // const [isOpenLanguage, setIsOpenLanguage] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-40 grow-0 border-gray-200 bg-primary bg-opacity-20 shadow-lg backdrop-blur-sm">
+    <nav className="sticky top-0 z-40 grow-0 border-gray-200 bg-motion-primary bg-opacity-20 shadow-lg backdrop-blur-sm">
       <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
         <Link
           to="/"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
           <img src="./img/circuit-board.svg" className="h-8" alt="logo" />
-          <span className="self-center whitespace-nowrap text-2xl font-semibold text-primary-200 ">
+          <span className="self-center whitespace-nowrap text-2xl font-semibold text-motion-primary-200 ">
             Home
           </span>
         </Link>
@@ -22,7 +22,7 @@ export default function Navbar() {
             type="button"
             style={{ display: "none" }}
             data-dropdown-toggle="language-dropdown-menu"
-            className="inline-flex cursor-pointer items-center justify-center rounded-lg px-4 py-2 text-sm font-medium text-primary-200 hover:text-primary-300"
+            className="inline-flex cursor-pointer items-center justify-center rounded-lg px-4 py-2 text-sm font-medium text-motion-primary-200 hover:text-motion-primary-300"
           >
             <svg
               className="me-3 size-5 rounded-full"
@@ -73,7 +73,7 @@ export default function Navbar() {
               <li>
                 <a
                   href="#"
-                  className="block px-4 py-2 text-sm text-primary-200  dark:text-primary-200 dark:hover:text-white"
+                  className="block px-4 py-2 text-sm text-motion-primary-200  dark:text-motion-primary-200 dark:hover:text-white"
                   role="menuitem"
                 >
                   <div className="inline-flex items-center">
@@ -118,7 +118,7 @@ export default function Navbar() {
           <button
             data-collapse-toggle="navbar-language"
             type="button"
-            className="inline-flex size-10 items-center justify-center rounded-lg p-2 text-sm text-primary-200 focus:outline-none focus:ring-2  focus:ring-gray-200 dark:text-primary-200 dark:focus:ring-gray-600 md:hidden"
+            className="inline-flex size-10 items-center justify-center rounded-lg p-2 text-sm text-motion-primary-200 focus:outline-none focus:ring-2  focus:ring-gray-200 dark:text-motion-primary-200 dark:focus:ring-gray-600 md:hidden"
             aria-controls="navbar-language"
             aria-expanded="false"
             onClick={() => setIsOpen(!isOpen)}
@@ -153,7 +153,7 @@ export default function Navbar() {
                 {path.startsWith("#") ? (
                   <a
                     href={path}
-                    className="block rounded px-3 py-2  text-primary-200 hover:text-primary-400 md:p-0 "
+                    className="block rounded px-3 py-2  text-motion-primary-200 hover:text-motion-primary-400 md:p-0 "
                     aria-current="page"
                   >
                     {label}
@@ -161,7 +161,7 @@ export default function Navbar() {
                 ) : (
                   <Link
                     to={path}
-                    className="block rounded px-3 py-2  text-primary-200 hover:text-primary-400 md:p-0 "
+                    className="block rounded px-3 py-2  text-motion-primary-200 hover:text-motion-primary-400 md:p-0 "
                     aria-current="page"
                   >
                     {label}

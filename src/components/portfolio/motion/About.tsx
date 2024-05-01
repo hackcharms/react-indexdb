@@ -22,7 +22,7 @@ function ServiceCard({ index, title, icon }: ServiceCardProps) {
           //   scale: 1,
           //   speed: 450,
           // }}
-          className="flex flex-col items-center justify-center rounded-xl bg-primary-600 bg-opacity-70 p-3"
+          className="flex flex-col items-center justify-center rounded-xl bg-motion-primary-600 bg-opacity-70 p-3"
         >
           <img src={icon} alt={title} className="size-16 object-contain" />
           <h3 className="text-balance text-lg">{title}</h3>
@@ -41,63 +41,63 @@ function About() {
       </motion.div>
       <motion.p
         variants={fadeIn("right", "", 0.1, 1)}
-        className="mt-4 max-w-3xl text-lg leading-5 text-secondary-200"
+        className="mt-4 max-w-3xl text-lg leading-5 text-motion-secondary-200"
       >
         Results-driven Software Developer with over {experienceInYear} years of
         experience implementing diverse applications and solutions using
         frontend and backend technologies like
         <a
           href="#"
-          className="pl-1 font-semibold text-secondary hover:underline "
+          className="pl-1 font-semibold text-motion-secondary hover:underline "
         >
           JavaScript
         </a>
         ,
         <a
           href="#"
-          className="pl-1 font-semibold text-secondary hover:underline "
+          className="pl-1 font-semibold text-motion-secondary hover:underline "
         >
           TypeScript
         </a>
         ,
         <a
           href="#"
-          className="pl-1 font-semibold text-secondary hover:underline "
+          className="pl-1 font-semibold text-motion-secondary hover:underline "
         >
           Vue.js
         </a>
         ,
         <a
           href="#"
-          className="pl-1 font-semibold text-secondary hover:underline "
+          className="pl-1 font-semibold text-motion-secondary hover:underline "
         >
           React.js
         </a>
         ,
         <a
           href="#"
-          className="pl-1 font-semibold text-secondary hover:underline "
+          className="pl-1 font-semibold text-motion-secondary hover:underline "
         >
           Nuxt.js
         </a>
         ,
         <a
           href="#"
-          className="pl-1 font-semibold text-secondary hover:underline "
+          className="pl-1 font-semibold text-motion-secondary hover:underline "
         >
           MySQL
         </a>
         ,
         <a
           href="#"
-          className="pl-1 font-semibold text-secondary hover:underline "
+          className="pl-1 font-semibold text-motion-secondary hover:underline "
         >
           PHP
         </a>
         , and
         <a
           href="#"
-          className="pl-1 font-semibold text-secondary hover:underline "
+          className="pl-1 font-semibold text-motion-secondary hover:underline "
         >
           Laravel
         </a>
