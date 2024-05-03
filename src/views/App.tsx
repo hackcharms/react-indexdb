@@ -1,7 +1,12 @@
+import { Hero, About, Technologies } from "../components/portfolio";
 const App = () => {
   return (
     <>
-      <h1>Hello there</h1>
+      <div className="">
+        <Hero />
+        <About />
+        <Technologies />
+      </div>
     </>
   );
 };
