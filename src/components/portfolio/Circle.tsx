@@ -18,7 +18,7 @@ export default function Circle({
       <circle
         cx={radius + 2}
         cy={radius + 2}
-        stroke-dasharray={`${dashArea} ${gap}`}
+        strokeDasharray={`${dashArea} ${gap}`}
         r={radius}
         fill="transparent"
         className="stroke-current"

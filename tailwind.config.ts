@@ -76,6 +76,9 @@ const config: Config = {
           "950": "#252a46",
         },
       },
+      dropShadow: {
+        secondary: "2px 4px 6px #7e7e3a",
+      },
       backgroundImage: {
         "hero-pattern": "url('/img/circuit-board.svg')",
         // 'footer-texture': "url('/img/footer-texture.png')",

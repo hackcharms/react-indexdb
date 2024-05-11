@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
-import Footer from "../components/portfolio/motion/Footer";
+// import Footer from "../components/portfolio/motion/Footer";
 import { Provider as ReduxProvider } from "react-redux";
 import store from "../store";
 export default function Layout() {
@@ -13,7 +13,7 @@ export default function Layout() {
             <Outlet />
           </div>
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </ReduxProvider>
   );

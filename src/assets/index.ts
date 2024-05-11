@@ -29,8 +29,11 @@ import vuetify from "./tech/vuetify.svg";
 
 import tcw from "./company/tcw.png";
 import credilio from "./company/credilio.webp";
+// projects
+import vue3Toaster from "./vue3-toaster.png";
+import askMe from "./askme.png";
 
-import carrent from "./carrent.png";
+// import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
@@ -58,7 +61,7 @@ export {
   threejs,
   tcw,
   credilio,
-  carrent,
+  // carrent,
   jobit,
   tripguide,
   mysql,
@@ -67,4 +70,8 @@ export {
   pinia,
   vuetify,
   laravel,
+  // Projects
+  vue3Toaster,
+  askMe,
+  // vue3Toaster,
 };

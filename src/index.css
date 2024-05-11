@@ -12,3 +12,29 @@
 @apply border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700
 
 }
+  .circle-animate{
+      transform-origin: var(--origin);
+      transform: translate3d(calc(var(--index)*var(--gap)*1),calc(var(--index)*var(--gap)*-1),0) skew(20deg, 0deg);
+      animation-name: circleAnimation;
+      animation-duration: 10s;
+      animation-timing-function: linear;
+      animation-delay: 2s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      
+    
+  }
+  @keyframes circleAnimation{
+    0%{
+      transform: translate3d(calc(var(--index)*var(--gap)*1),calc(var(--index)*var(--gap)*-1),0) skew(20deg, 0deg);
+    }
+    45%{
+      transform: translate3d(0,0,0) skew(0deg, 0deg);
+    }
+    98%{
+      transform: rotate(calc(var(--index)*-36deg))
+    }
+    100%{
+      transform: rotate(calc(var(--index)*-36deg))
+    }
+  }

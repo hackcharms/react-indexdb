@@ -1,47 +1,51 @@
-import { carrent, jobit, tripguide } from "../assets";
+import { askMe, tripguide, vue3Toaster } from "../assets";
 
 export const projects = [
   {
-    name: "Car Rent",
+    name: "Vue3 Toaster",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Revolutionize your Vue.js 3 development with vue3-toaster, a lightweight and fully customizable toast notification package that seamlessly blends into your design, requiring zero third-party dependencies for a cleaner bundle size and offering effortless customization to match your exact design requirements. Easily integrate toast notifications into your Vue.js components and tailor their look and feel to match your exact requirements. Easy-to-use composables and plugins for effortless integration.",
     tags: [
       {
-        name: "react",
+        name: "vue3",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "typescript",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "notification",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: vue3Toaster,
+    source_code_link: "https://github.com/hackcharms/vue3-toaster",
   },
   {
-    name: "Job IT",
+    name: "Ask Me",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Stack Overflow like Application where you can raise Questions, Update it and mark the best answer and reply on other's Questions as well.",
     tags: [
       {
-        name: "react",
+        name: "Laravel",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "MySQL",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "PHP",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "bootstrap",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: askMe,
+    source_code_link: "https://github.com/hackcharms/askme",
   },
   {
     name: "Trip Guide",
