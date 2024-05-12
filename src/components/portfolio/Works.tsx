@@ -1,17 +1,17 @@
 import { tcw } from "../../assets";
 import { credilio } from "../../assets";
 import Triangle from "./Triangle";
-export default function Works({}) {
+export default function Works() {
   return (
-    <div className="mt-20 relative">
-      <div className="absolute mx-auto left-[10%] rotate-45 group-hover:rotate-0 duration-1000">
+    <div className="relative mt-20">
+      <div className="absolute left-[10%] mx-auto rotate-45 duration-1000 group-hover:rotate-0">
         <Triangle />
       </div>
-      <div className="absolute bottom-0 left-2/3 md:right-1/4 -rotate-12 group-hover:rotate-0 duration-1000">
+      <div className="absolute bottom-0 left-2/3 -rotate-12 duration-1000 group-hover:rotate-0 md:right-1/4">
         <Triangle />
       </div>
-      <h1 className="text-4xl px-4 font-bold">Works</h1>
-      <h3 className="text-xl pl-4"> Companies I have worked in so far.</h3>
+      <h1 className="px-4 text-4xl font-bold">Works</h1>
+      <h3 className="pl-4 text-xl"> Companies I have worked in so far.</h3>
       <div>
         <WorkCard />
       </div>
@@ -22,17 +22,17 @@ export default function Works({}) {
 function WorkCard() {
   return (
     <>
-      <div className="flex flex-wrap my-10">
-        <div className="w-full md:w-1/2 self-center">
-          <div className="flex flex-col justify-center items-center">
+      <div className="my-10 flex flex-wrap">
+        <div className="w-full self-center md:w-1/2">
+          <div className="flex flex-col items-center justify-center">
             <img
               src={credilio}
               alt="Credilio Financial Limited Logo"
-              className="size-52 z-0"
+              className="z-0 size-52"
             />
             <a
               href="http://credilio.in"
-              className="text-secondary underline text-2xl font-semibold"
+              className="text-2xl font-semibold text-secondary underline"
               target="_blank"
             >
               Credilio Financial Limited
@@ -42,14 +42,14 @@ function WorkCard() {
               <span className="px-2">-</span>
               <time dateTime={Date.toString()}>Present</time>
             </p>
-            <p className="text-center text-balance text-lg">
+            <p className="text-balance text-center text-lg">
               A Technology-driven personal finance platform connecting banks,
               financial advisors, and consumers
             </p>
           </div>
         </div>
-        <div className="w-full md:w-1/2 self-center">
-          <ul className="list-disc list-inside">
+        <div className="w-full self-center md:w-1/2">
+          <ul className="list-inside list-disc">
             <li>
               Spearheaded a project restructuring initiative using composable
               components and best practices, resulting in a 20% improvement in
@@ -76,17 +76,17 @@ function WorkCard() {
           </ul>
         </div>
       </div>
-      <div className="flex flex-wrap flex-row-reverse my-20">
-        <div className="w-full md:w-1/2 self-center">
-          <div className="flex flex-col justify-center items-center">
+      <div className="my-20 flex flex-row-reverse flex-wrap">
+        <div className="w-full self-center md:w-1/2">
+          <div className="flex flex-col items-center justify-center">
             <img
               src={tcw}
               alt="Credilio Financial Limited Logo"
-              className="min-w-52 max-w-52 max-h-52 z-0"
+              className="z-0 max-h-52 min-w-52 max-w-52"
             />
             <a
               href="http://thecodework.com"
-              className="text-secondary underline text-2xl font-semibold"
+              className="text-2xl font-semibold text-secondary underline"
               target="_blank"
             >
               TheCodeWork
@@ -97,15 +97,15 @@ function WorkCard() {
               <time dateTime="2022-12-5 00:00">Dec 2022</time>
             </p>
 
-            <p className="text-center text-balance text-lg">
+            <p className="text-balance text-center text-lg">
               A long-term tech & innovation partner.
             </p>
           </div>
         </div>
-        <div className="w-full md:w-1/2 self-center">
+        <div className="w-full self-center md:w-1/2">
           <ul>
             <li>
-              <ul className="list-disc list-inside">
+              <ul className="list-inside list-disc">
                 <a
                   href="https://vokabul8.com"
                   className="text-lg  font-semibold underline"
@@ -127,7 +127,7 @@ function WorkCard() {
               </ul>
             </li>
             <li>
-              <ul className="list-disc list-inside">
+              <ul className="list-inside list-disc">
                 <h1 className="text-lg font-semibold">E-POS</h1>
                 <li>
                   APIs integration with throttling algorithms like leaky bucket.
@@ -143,7 +143,7 @@ function WorkCard() {
               </ul>
             </li>
             <li>
-              <ul className="list-disc list-inside">
+              <ul className="list-inside list-disc">
                 <a
                   href="https://vokabul8.com"
                   className="text-lg  font-semibold underline"

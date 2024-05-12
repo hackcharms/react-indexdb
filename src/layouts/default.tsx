@@ -6,9 +6,9 @@ import store from "../store";
 export default function Layout() {
   return (
     <ReduxProvider store={store}>
-      <div className="text-light-500 flex min-h-dvh bg-primary flex-col justify-center ">
+      <div className="flex min-h-dvh flex-col justify-center bg-primary text-light-500 ">
         <Navbar />
-        <div className="grow flex justify-center">
+        <div className="flex grow justify-center">
           <div className="max-w-6xl">
             <Outlet />
           </div>

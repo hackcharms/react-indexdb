@@ -1,5 +1,4 @@
 import { Config } from "tailwindcss";
-import { lightingContext } from "three/examples/jsm/nodes/Nodes.js";
 const config: Config = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   darkMode: "class",
@@ -89,8 +88,10 @@ const config: Config = {
   },
   plugins: [],
   safelist: [
+    'animate-triangle',
+    'circle-animate',
     {
-      pattern: /bg-(zinc|pink|blue|fuchsia)-(100|200|600)/,
+      pattern: /(bg|text)-(primary|secondary|light|motion-primary|motion-secondary)-(100|200|600)/,
       variants: ["hover", "dark:hover", "dark"],
     },
   ],

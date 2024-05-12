@@ -1,8 +1,8 @@
 export default function About() {
   return (
     <div className="">
-      <h1 className="text-4xl px-4 font-bold">Who I am !</h1>
-      <div className="flex flex-wrap-reverse md:flex-nowrap justify-center items-center">
+      <h1 className="px-4 text-4xl font-bold">Who I am !</h1>
+      <div className="flex flex-wrap-reverse items-center justify-center md:flex-nowrap">
         <p className="pl-10 text-lg">
           Driven Software Developer with 3+ years of experience building
           impactful applications. Leverage a deep understanding of frontend and

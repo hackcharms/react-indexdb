@@ -13,7 +13,7 @@ export default function Curve({ dividerClass = "", m = 30, count = 5 }) {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0.339746 422 19.32"
-      className={` absolute w-full ${dividerClass} duration-100 transform`}
+      className={` absolute w-full ${dividerClass} duration-100`}
     >
       {Array(count)
         .fill("el")
@@ -24,9 +24,9 @@ export default function Curve({ dividerClass = "", m = 30, count = 5 }) {
             key={index}
             strokeWidth="1"
             fill="transparent"
-            className={`[stroke-dasharray:200%] [stroke-dashoffset:200%] group-hover:[stroke-dashoffset:0] transition-all ease-in-out duration-[3s] text-secondary-${parseInt(
-              Math.random() * 10
-            )}00`}
+            className={`transition-all duration-[3s] ease-in-out [stroke-dasharray:200%] [stroke-dashoffset:200%] group-hover:[stroke-dashoffset:0] text-secondary-${
+              ((Math.random() * 8) ^ 1) + 1
+            }00`}
           />
         ))}
     </svg>

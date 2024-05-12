@@ -15,7 +15,7 @@ export default function Footer() {
           </a>
         ))}
       </div>
-      <div className="opacity-50 py-4">
+      <div className="py-4 opacity-50">
         All Right Reserved @ {new Date().getFullYear()}
       </div>
     </footer>

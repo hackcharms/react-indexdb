@@ -11,7 +11,7 @@ const ProjectCard = ({
   description,
   tags,
   image,
-  source_code_link,
+  git,
 }: (typeof projects)[number] & { index: number }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -32,7 +32,7 @@ const ProjectCard = ({
 
           <div className="card-img_hover absolute inset-0 m-3 flex justify-end">
             <div
-              onClick={() => window.open(source_code_link, "_blank")}
+              onClick={() => window.open(git, "_blank")}
               className="black-gradient flex size-10 cursor-pointer items-center justify-center rounded-full"
             >
               <img
