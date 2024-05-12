@@ -21,7 +21,7 @@ export default function Hero() {
             className="absolute rotate-[40deg] transition-all duration-500 group-hover:rotate-[55deg]"
           />
           <img
-            src="/public/Zubair.png"
+            src="/Zubair.png"
             className="size-[290px] rounded-full transition-all duration-500 group-hover:drop-shadow-light"
           />
         </div>
