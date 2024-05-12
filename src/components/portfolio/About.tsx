@@ -1,7 +1,7 @@
 export default function About() {
   return (
     <div className="">
-      <h1 className="text-2xl text-secondary"> About</h1>
+      <h1 className="text-4xl px-4 font-bold">Who I am !</h1>
       <div className="flex justify-center items-center">
         <p className="pl-10 text-lg">
           Driven Software Developer with 3+ years of experience building

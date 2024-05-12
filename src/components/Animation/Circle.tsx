@@ -29,9 +29,10 @@ export default function CircleAnimation({
             r={radius}
             key={index}
             fill="transparent"
-            className="stroke-current circle-animate"
+            className="circle-animate"
             style={{ "--index": index }}
             strokeWidth={strokeWidth}
+            stroke="currentColor"
           />
         ))}
     </svg>

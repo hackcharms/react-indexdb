@@ -1,4 +1,6 @@
 import Divider from "../components/Divider";
+import Footer from "../components/Footer";
+import Star from "../components/Star";
 import { Hero, About, Technologies } from "../components/portfolio";
 import Projects from "../components/portfolio/Projects";
 import Works from "../components/portfolio/Works";
@@ -19,10 +21,12 @@ const App = () => {
           <Divider id="works" label="Works" />
           <Works />
         </div>
-        <div className="group">
+        <div className="group relative">
+          <Star className="absolute text-primary-200/20 size-96" />
           <Divider id="project" label="Project" />
           <Projects />
         </div>
+        <Footer />
       </div>
     </>
   );

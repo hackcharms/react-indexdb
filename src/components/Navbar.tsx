@@ -5,7 +5,7 @@ import { navLinks } from "../constants";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="bg-secondary/10 border-b border-secondary-900 ">
+    <nav className=" border-b border-light/20 ">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a
           href="/"

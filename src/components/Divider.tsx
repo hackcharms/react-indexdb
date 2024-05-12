@@ -10,12 +10,13 @@ export default function Divider({
   dividerClass?: string;
 }) {
   return (
-    <div className="relative w-full my-10 flex flex-col items-center justify-center h-full">
-      <hr className={`w-full ${dividerClass} shadow-md`} />
-      <Curve />
-      <h1 className="text-4xl absolute bg-primary px-1 leading-7" id={id}>
+    <div className="relative w-full mt-36 mb-20 flex flex-col items-center justify-center h-full">
+      <span id={id}> &nbsp; </span>
+      {/* <hr className={`w-full ${dividerClass} shadow-md`} /> */}
+      <Curve count={((Math.random() * 5) ^ 1) + 1} />
+      {/* <h1 className="text-4xl absolute bg-primary px-1 leading-7" id={id}>
         {label}
-      </h1>
+      </h1> */}
     </div>
   );
 }

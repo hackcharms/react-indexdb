@@ -17,10 +17,11 @@ export default function Curve({ dividerClass = "", m = 30, count = 5 }) {
     >
       {Array(count)
         .fill("el")
-        .map(() => (
+        .map((_, index) => (
           <path
             d={`M ${randomX()} 10 ${Array(curveCount).fill(curve()).join(" ")}`}
             stroke="currentColor"
+            key={index}
             strokeWidth="1"
             fill="transparent"
             className={`[stroke-dasharray:200%] [stroke-dashoffset:200%] group-hover:[stroke-dashoffset:0] transition-all ease-in-out duration-[3s] text-secondary-${parseInt(

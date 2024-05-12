@@ -16,10 +16,21 @@
       transform-origin: var(--origin);
       transform: translate3d(calc(var(--index)*var(--gap)*1),calc(var(--index)*var(--gap)*-1),0) skew(20deg, 0deg);
       animation-name: circleAnimation;
-      animation-duration: 10s;
+      animation-duration: 5s;
       animation-timing-function: linear;
       animation-delay: 2s;
       animation-iteration-count: infinite;
+      animation-direction: alternate;
+      
+    
+  }
+.animate-triangle{
+      animation-name: stretchAndShrink;
+      animation-duration: 5s;
+      animation-timing-function: linear;
+      animation-delay: 1s;
+      animation-iteration-count: 2;
+      /* animation-iteration-count: infinite; */
       animation-direction: alternate;
       
     
@@ -36,5 +47,14 @@
     }
     100%{
       transform: rotate(calc(var(--index)*-36deg))
+    }
+  }
+
+  @keyframes stretchAndShrink{
+    40%{
+      stroke-dashoffset:380%;
+    }
+    100%{
+      stroke-dashoffset:-380%;
     }
   }

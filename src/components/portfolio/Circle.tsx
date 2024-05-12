@@ -21,7 +21,7 @@ export default function Circle({
         strokeDasharray={`${dashArea} ${gap}`}
         r={radius}
         fill="transparent"
-        className="stroke-current"
+        stroke="currentColor"
         strokeWidth={strokeWidth}
       />
     </svg>

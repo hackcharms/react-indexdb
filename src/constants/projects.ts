@@ -20,12 +20,14 @@ export const projects = [
       },
     ],
     image: vue3Toaster,
-    source_code_link: "https://github.com/hackcharms/vue3-toaster",
+    demo:'https://hackcharms.xyz/vue3-toaster',
+    git: "https://github.com/hackcharms/vue3-toaster",
   },
   {
     name: "Ask Me",
-    description:
-      "Stack Overflow like Application where you can raise Questions, Update it and mark the best answer and reply on other's Questions as well.",
+    description:[
+      "Stack Overflow like Application where you can raise Questions, Update it and mark the best answer and reply on other's Questions as well",
+    ],
     tags: [
       {
         name: "Laravel",
@@ -45,27 +47,6 @@ export const projects = [
       },
     ],
     image: askMe,
-    source_code_link: "https://github.com/hackcharms/askme",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    git: "https://github.com/hackcharms/askme",
   },
 ];

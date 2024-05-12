@@ -1,4 +1,5 @@
 import { Config } from "tailwindcss";
+import { lightingContext } from "three/examples/jsm/nodes/Nodes.js";
 const config: Config = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   darkMode: "class",
@@ -78,6 +79,7 @@ const config: Config = {
       },
       dropShadow: {
         secondary: "2px 4px 6px #7e7e3a",
+        light: "2px 4px 6px #d1d1d1",
       },
       backgroundImage: {
         "hero-pattern": "url('/img/circuit-board.svg')",
