@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <div className="relative flex flex-wrap w-full justify-center md:justify-start">
       <div className="my-10">
-        <div className="relative flex justify-center items-center min-width-[300px] group">
+        <div className="relative flex justify-center items-center min-width-[300px] group overflow-hidden p-2">
           <Circle
             radius={150}
             dashes={2}
@@ -38,12 +38,12 @@ export default function Hero() {
             From full-stack development to crafting reusable UI components, I
             thrive in diverse technical environments, always seeking new
             challenges to push the boundaries of what's possible,
-            <Link to="/about" className="text-secondary underline px-1">
+            <Link to="#about" className="text-secondary underline px-1">
               know more
             </Link>
           </p>
         </div>
-        <div className="absolute top-1/3 right-[10%] text-primary-500/50">
+        <div className="absolute -bottom-1/2 md:top-1/3 right-[10%] text-primary-500/50">
           <CircleAnimation />
         </div>
       </div>

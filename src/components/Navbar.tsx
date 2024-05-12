@@ -52,13 +52,13 @@ export default function Navbar() {
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 ">
             {navLinks.map(({ label, path }) => (
               <li key={label}>
-                <Link
-                  to={path}
+                <a
+                  href={`${path}`}
                   className="block py-2 px-3 text-light-500 hover:text-primary rounded hover:bg-light-900 md:hover:bg-transparent md:border-0 md:hover:text-secondary md:p-0  "
                   aria-current="page"
                 >
                   {label}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>

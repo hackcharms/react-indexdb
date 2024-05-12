@@ -36,7 +36,7 @@ export const navLinks = [
     label: "About",
   },
   {
-    path: "#experience",
+    path: "#works",
     label: "Experience",
   },
   {
@@ -44,12 +44,12 @@ export const navLinks = [
     label: "Tech Stacks",
   },
   {
-    path: "#work",
-    label: "Work",
+    path: "#project",
+    label: "Projects",
   },
   {
-    path: "#contact",
-    label: "Contact",
+    path: "#social-links",
+    label: "Contacts",
   },
 ];
 

@@ -10,22 +10,23 @@ const App = () => {
       <div className="">
         <Hero />
         <div className="group">
-          <Divider id="works" label="About" />
+          <Divider id="about" label="About" />
           <About />
         </div>
         <div className="group">
           <Divider id="technologies" label="Technologies" />
           <Technologies />
         </div>
-        <div className="group">
+        <div className="group overflow-hidden">
           <Divider id="works" label="Works" />
           <Works />
         </div>
-        <div className="group relative">
-          <Star className="absolute text-primary-200/20 size-96" />
+        <div className="group relative overflow-hidden">
+          <Star className="absolute top-10 left-1/2 text-primary-200/20 size-1/3 group-hover:rotate-45 duration-1000" />
           <Divider id="project" label="Project" />
           <Projects />
         </div>
+        <span id="social-links"> &nbsp; </span>
         <Footer />
       </div>
     </>

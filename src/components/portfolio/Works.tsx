@@ -4,10 +4,10 @@ import Triangle from "./Triangle";
 export default function Works({}) {
   return (
     <div className="mt-20 relative">
-      <div className="absolute mx-auto left-1/4  rotate-45">
+      <div className="absolute mx-auto left-[10%] rotate-45 group-hover:rotate-0 duration-1000">
         <Triangle />
       </div>
-      <div className="absolute bottom-0 right-1/4 -rotate-12">
+      <div className="absolute bottom-0 left-2/3 md:right-1/4 -rotate-12 group-hover:rotate-0 duration-1000">
         <Triangle />
       </div>
       <h1 className="text-4xl px-4 font-bold">Works</h1>
