@@ -1,7 +1,7 @@
 import { tcw } from "../../assets";
 import { credilio } from "../../assets";
 import Triangle from "./Triangle";
-export default function Works() {
+export default function Works({}) {
   return (
     <div className="relative mt-20">
       <div className="absolute left-[10%] mx-auto rotate-45 duration-1000 group-hover:rotate-0">

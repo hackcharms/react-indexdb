@@ -1,3 +1,5 @@
+import { CSSProperties } from "react";
+
 export default function CircleAnimation({
   radius = 100,
   strokeWidth = 2,
@@ -13,7 +15,12 @@ export default function CircleAnimation({
     <svg
       width={size}
       height={size}
-      style={{ "--gap": gap, "--origin": `${originX}px ${originY}px` }}
+      style={
+        {
+          "--gap": gap,
+          "--origin": `${originX}px ${originY}px`,
+        } as CSSProperties
+      }
       className={className}
       viewBox={`-${strokeWidth + padding} -${
         strokeWidth + padding
@@ -30,7 +37,7 @@ export default function CircleAnimation({
             key={index}
             fill="transparent"
             className="circle-animate"
-            style={{ "--index": index }}
+            style={{ "--index": index } as CSSProperties}
             strokeWidth={strokeWidth}
             stroke="currentColor"
           />
