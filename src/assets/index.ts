@@ -1,8 +1,4 @@
 import logo from "./logo.svg";
-import backend from "./backend.png";
-import creator from "./creator.png";
-import mobile from "./mobile.png";
-import web from "./web.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
@@ -22,6 +18,7 @@ import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 import laravel from "./tech/laravel.svg";
 import vuejs from "./tech/vuejs.svg";
+import angular from "./tech/angular.svg";
 import nuxtjs from "./tech/nuxtjs.svg";
 import pinia from "./tech/pinia.svg";
 import mysql from "./tech/mysql.svg";
@@ -33,16 +30,8 @@ import credilio from "./company/credilio.webp";
 import vue3Toaster from "./vue3-toaster.png";
 import askMe from "./askme.png";
 
-// import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
-
 export {
   logo,
-  backend,
-  creator,
-  mobile,
-  web,
   github,
   menu,
   close,
@@ -56,22 +45,18 @@ export {
   nodejs,
   reactjs,
   redux,
+  angular,
   tailwind,
   typescript,
   threejs,
   tcw,
   credilio,
-  // carrent,
-  jobit,
-  tripguide,
   mysql,
   vuejs,
   nuxtjs,
   pinia,
   vuetify,
   laravel,
-  // Projects
   vue3Toaster,
   askMe,
-  // vue3Toaster,
 };

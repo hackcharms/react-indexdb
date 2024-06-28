@@ -89,6 +89,7 @@ const config: Config = {
   plugins: [],
   safelist: [
     'animate-triangle',
+    'mic-drop-animation',
     'circle-animate',
     {
       pattern: /(bg|text)-(primary|secondary|light|motion-primary|motion-secondary)-(100|200|600)/,

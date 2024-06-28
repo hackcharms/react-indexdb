@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import todoSlice from "./todo";
+// import todoSlice from "./todo";
 import { useDispatch } from "react-redux";
 const store = configureStore({
   reducer: {
-    todo: todoSlice,
+    // todo: todoSlice,
   },
   // middleware:(data)=>{
   //     console.log('middleware data',data);

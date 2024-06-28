@@ -5,6 +5,7 @@ export const experiences = [
     title: "Software Engineer (Frontend)",
     company_name: "Credilio Financial Technologies",
     icon: credilio,
+    url:'https://credilio.in',
     iconBg: "#c491ef",
     date: "Dec 2022 - Present",
     points: [
@@ -18,6 +19,7 @@ export const experiences = [
   {
     title: "Full stack Developer",
     company_name: "TheCodeWork",
+    url:'https://thecodeworks.com',
     icon: tcw,
     iconBg: "#c491ef",
     date: "May 2021 - Nov 2022",

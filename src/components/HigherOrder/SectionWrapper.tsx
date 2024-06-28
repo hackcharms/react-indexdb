@@ -1,5 +1,8 @@
-import { Variants, motion } from "framer-motion";
-import { staggerContainer } from "../../utils/motion";
+import {
+  //  Variants,
+  motion,
+} from "framer-motion";
+// import { staggerContainer } from "../../utils/motion";
 import { styles } from "../../constants/styles";
 import { JSXElementConstructor } from "react";
 function SectionWrapper(
@@ -9,13 +12,16 @@ function SectionWrapper(
   return function HOC() {
     return (
       <motion.section
-        variants={staggerContainer() as Variants}
+        // variants={staggerContainer() as Variants}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}
-        className={`${styles.padding} max-w-7x relative z-0 mx-auto`}
+        className={`${styles.padding} relative z-0 mx-auto max-w-7xl`}
       >
-        <span className="hash-span" id={idName}>
+        <span
+          // className="hash-span"
+          id={idName}
+        >
           &nbsp;
         </span>
         <Component />

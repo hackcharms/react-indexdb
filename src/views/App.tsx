@@ -22,7 +22,7 @@ const App = () => {
           <Works />
         </div>
         <div className="group relative overflow-hidden">
-          <Star className="absolute left-1/2 top-10 size-1/3 text-primary-200/20 duration-1000 group-hover:rotate-45" />
+          <Star className="absolute top-10 w-full text-primary-200/20 duration-1000 group-hover:rotate-45 md:left-1/2 md:size-1/3" />
           <Divider id="project" label="Project" />
           <Projects />
         </div>

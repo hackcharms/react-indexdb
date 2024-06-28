@@ -1,4 +1,4 @@
-import { x,github,instagram,linkedIn,stackOverflow } from "../assets/social"
+import { x,github,instagram,linkedIn,stackOverflow, medium } from "../assets/social"
 
 export const socialLinks:{
     label:string,
@@ -20,6 +20,16 @@ export const socialLinks:{
     icon:github,
     link:'https://github.com/hackcharms'
 },
+    {
+    label:'Medium',
+    icon:medium,
+    link:'https://medium.com/@hackcharms'
+},
+//     {
+//     label:'Stack Overflow',
+//     icon:stackOverflow,
+//     link:'https://stackoverflow.com/users/13666655/hackcharms'
+// },
     {
     label:'Stack Overflow',
     icon:stackOverflow,

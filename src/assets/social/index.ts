@@ -3,4 +3,5 @@ import x from "./x.svg";
 import instagram from "./instagram.svg";
 import stackOverflow from "./stackoverflow.svg";
 import github from "./github.svg";
-export { linkedIn, x, instagram, stackOverflow, github, };
+import medium from "./medium.svg";
+export { linkedIn, x, instagram, stackOverflow, github, medium};
