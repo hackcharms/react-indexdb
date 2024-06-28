@@ -18,6 +18,9 @@ module.exports = {
             {
                 cssFiles: ["src/**/*.css"],
                 callees: ["classnames", "clsx", "twMerge", "cn"],
+                whitelist: ['mic-drop-animation','animate-triangle','circle-animate'],
+                config: 'tailwind.config.ts',
+                cssFiles: ['./index.css'],
             },
         ],
     'react-refresh/only-export-components': [

@@ -5,6 +5,7 @@ import {
   css,
   reactjs,
   redux,
+  angular,
   tailwind,
   nodejs,
   mongodb,
@@ -51,6 +52,10 @@ export const technologies = [
   {
     name: "Redux Toolkit",
     icon: redux,
+  },
+  {
+    name: "Angular",
+    icon: angular,
   },
   {
     name: "Tailwind CSS",

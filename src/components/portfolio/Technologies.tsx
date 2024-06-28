@@ -10,7 +10,7 @@ export default function Technologies() {
       <h3 className="pb-8 pl-6 text-2xl">
         But Not limited to it, always thrive to achieve more
       </h3>
-      <div className="flex flex-wrap justify-center gap-4 ">
+      <div className="flex flex-wrap justify-center gap-4 overflow-hidden pb-2">
         {technologies.map(({ name, icon }) => (
           <div
             key={name}

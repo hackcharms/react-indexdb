@@ -1,3 +1,5 @@
+import { useMemo } from "react";
+
 export default function Curve({ dividerClass = "", m = 30, count = 5 }) {
   function randomX() {
     return Math.random() * 20 + Math.random() * 10;
@@ -9,6 +11,10 @@ export default function Curve({ dividerClass = "", m = 30, count = 5 }) {
   function curve() {
     return `c ${randomM()} -${randomM()} ${randomM()} ${randomM()} ${30 * 2} 0`;
   }
+  const dynamicClass = useMemo(
+    () => `text-secondary-${((Math.random() * 8) ^ 1) + 1}00`,
+    []
+  );
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -24,9 +30,7 @@ export default function Curve({ dividerClass = "", m = 30, count = 5 }) {
             key={index}
             strokeWidth="1"
             fill="transparent"
-            className={`transition-all duration-[3s] ease-in-out [stroke-dasharray:200%] [stroke-dashoffset:200%] group-hover:[stroke-dashoffset:0] text-secondary-${
-              ((Math.random() * 8) ^ 1) + 1
-            }00`}
+            className={`transition-all duration-[3s] ease-in-out [stroke-dasharray:200%] [stroke-dashoffset:200%] group-hover:[stroke-dashoffset:0] ${dynamicClass}`}
           />
         ))}
     </svg>

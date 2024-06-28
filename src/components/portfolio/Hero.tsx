@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <div className="relative flex w-full flex-wrap justify-center md:justify-start">
       <div className="my-10">
-        <div className="min-width-[300px] group relative flex items-center justify-center overflow-hidden p-2">
+        <div className="group relative flex min-w-[300px] items-center justify-center overflow-hidden p-2">
           <Circle
             radius={150}
             dashes={2}
