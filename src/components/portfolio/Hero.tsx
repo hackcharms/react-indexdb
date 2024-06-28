@@ -22,6 +22,7 @@ export default function Hero() {
           />
           <img
             src="/Zubair.png"
+            alt="Zubair profile pic"
             className="size-[290px] rounded-full transition-all duration-500 group-hover:drop-shadow-light"
           />
         </div>

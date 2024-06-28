@@ -4,9 +4,9 @@ export default function Projects() {
   return (
     <div className="relative px-4">
       <h1 className="text-4xl font-bold">Projects</h1>
-      <h3 className="my-2 text-lg">
+      <h2 className="my-2 text-lg">
         Apart from working for Companies a Have worked on these projects
-      </h3>
+      </h2>
       <ProjectCard />
     </div>
   );

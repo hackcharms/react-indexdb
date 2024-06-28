@@ -7,9 +7,9 @@ export default function Technologies() {
       <h1 className="px-4 text-4xl font-bold">
         Technologies I have worked so far
       </h1>
-      <h3 className="pb-8 pl-6 text-2xl">
+      <h2 className="pb-8 pl-6 text-2xl">
         But Not limited to it, always thrive to achieve more
-      </h3>
+      </h2>
       <div className="flex flex-wrap justify-center gap-4 overflow-hidden pb-2">
         {technologies.map(({ name, icon }) => (
           <div
@@ -34,7 +34,7 @@ export default function Technologies() {
                 alt={name}
                 className="size-20 group-hover/tech:drop-shadow-secondary"
               />
-              <h3>{name}</h3>
+              <h2>{name}</h2>
             </div>
           </div>
         ))}
